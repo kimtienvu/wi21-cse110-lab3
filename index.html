@@ -19,7 +19,32 @@
 		</div>
   </nav>
   <aside>
-    <p> <code>System.out.println("Hello World!");</code><br>I am an undergraduate student at UCSD studying Computer Science.</p>
+    <table id="languages">
+        <caption>Different ways to print "Hello World"</caption>
+        <colgroup>
+          <col style="background-color: #FFF">
+          <col span="1">
+        </colgroup>
+        <tr>
+          <th>Programming Language | </th>
+          <th>Print "Hello World"</th>
+        </tr>
+      <tbody>
+        <tr>
+          <td>Java</td>
+          <td><code>System.out.println("Hello World!");</code></td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td><code>print "Hello World"</code></td>
+        </tr>
+        <tr>
+            <td>Bash</td>
+            <td><code>echo "Hello World"</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p> Hello World!<br>I am an undergraduate student at UCSD studying Computer Science.</p>
   </aside>
   <main>
     <img src = img/kim.png alt="Me.png" height="300" width="230">
@@ -38,18 +63,22 @@
       <li><em>Teaching Computational Thinking For Everyone</em></li>
     </ul>
   </section>
+  <hr>
   <section>
     <h3>Hobbies</h3>
     <p>I like to spend my free time doing:</p>
     <ol>
-      <li><span>Listening to Broadway Musicals</span> and trying to sing them <em>(change the window width to see images)</em>
+      <li><span>Listening to Broadway Musicals:</span> <template id="hide"><p>and trying to sing them</p></template> <em>(change the window width to see images)</em>
         <pre>¯\_(ツ)_/¯</pre> 
         <picture>
           <source srcset=img/Hadestown_musical_poster.png media="(min-width: 800px)">
           <img src=img/DearEvanposter.png alt="Dear Evan Hansen">
         </picture> 
-        <br>Dear Evan Hansen image - By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=58246327
-        <br>Hadestown image - By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=61357193</li>
+        <details>
+        <summary>Click here to see Image Sources</summary>
+          Hadestown image - By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=61357193 <br>
+          Dear Evan Hansen image - By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=58246327
+        </details></li>
       <li>Cooking <i>and eating</i> food!</li>
       <li>Hackathons <strong>(Some of my favorite ones are below):</strong></li>
     </ol>
@@ -58,24 +87,100 @@
       <li><a href="https://devpost.com/software/food-selected-for-you">HackXX 2019</a></li>
     </ul>
     <p>I also play video games... <br> However the ones I want to play that I have yet to get are: </p>
-    
+    <select>
+      <optgroup label="Titles">
+        <option>Little Nightmares II</option>
+        <option>The Last of Us</option>
+        <option>Cyberpunk 2077</option>
+        <option>Ark</option>
+      </optgroup>
+    </select>
     <figure>
       <img src=img/Little_Nightmares_Cover_Art.jpg alt="Little Nightmares.jpg">
       <figcaption>Little Nightmares II Cover Art</figcaption>
     </figure>
-    <p>By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=61608280</p>
+    <details>
+        <summary>Click here to see Image Sources</summary>
+          By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=61608280
+    </details>
   </section>
- 
-  
-  <span> </span>
-  
-
-  
+  <hr>
+  <section>
+    <h3>Fun What-cha-ma-call-its!</h3>
+    <fieldset>
+    <label for="Musicals">Want to Recommend Other Musicals?</label>
+    <input list="musicals" id="Musicals" name="Musicals" />
+    <datalist id="musicals">
+      <option value="Wicked">
+      <option value="Heathers">
+      <option value="Hamilton">
+      <option value="Be More Chill">
+    </datalist>  
+    <input type=button value="Press me!">
+    </fieldset>
+    <fieldset> <legend>Want to send me video game recommendations? </legend>
+      <form action="https://github.com/kimtienvu/CSE110_Lab2/blob/main/index.html" method="get">
+        <div>
+          <label for="Title">Enter A Video Game Title: </label>
+          <input type="text" name="Title" id="Title" required>
+        </div>
+        <div>
+          <input type="submit" value="Submit!">
+        </div>
+      </form>
+    </fieldset>
+    <figure>
+    <figcaption>Fun clips: </figcaption>
+    <video controls width="250" height="200" muted>
+      <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+    </video>
+    <audio controls src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"></audio>
+    </figure>
+    <details>
+        <summary>Click here to see Media Sources</summary>
+          For the audio file: https://www.learningcontainer.com/sample-audio-file/ <br>
+          For the Video: https://www.learningcontainer.com/mp4-sample-video-files-download/
+    </details>
+    <canvas>This would have been really cool to use a canvas if I could use javascript.
+      <p> Create Your circle!</p>
+      <label for="name">Name Your Circle:</label>
+      <input type="text" id="name" name="name" required minlength="0" maxlength="60" size="10">
+      <label for="phone">Give your Circle a phone number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <input type="color" id="Color" name="Color" value="#e66465">
+      <label for="Color">Choose a Color!</label>
+      <label for="Edges">How many edges do you want in your circle?</label>
+      <input type="number" id="Edges" name="Edges" min="0" max="100">
+      <input type="range" id="spin" name="spin" min="0" max="100">
+      <label for="spin">How much spin do you want on your circle?</label>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="blue" />
+      </svg>
+      <input type="reset" value="Reset">
+    </canvas>
+  </section>
+  <hr>
+  <section>
+    <h3>Want to see how many other people visited this site on the same day as you?</h3>
+    <input type="date" id="day" name="day" value="1999-01-01" min="1999-01-01" max="2021-12-31">
+  </section>
+  <hr>
+  <section>
+    <h3>My Other About Me Site:</h3>
+    <iframe src="https://kimtienvu.github.io/" title="Other About Me Site"></iframe>
+    <div>
+      <label for="comment">Leave a Comment Below!</label><br>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" pattern=".+@domain.com" size="30" required>
+      </div>
+      <textarea id="comment" name="comment" rows="3" cols="40">Feedback</textarea>
+      <button class="Enter" type="button">Enter</button>
+    </div>
+  </section>
   <footer>
     <p>© 2021 Kim Tien Vu</p>
   </footer>
-
-
 </body>
 </html>
 
