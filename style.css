@@ -10,19 +10,19 @@ body {
 }
 
 p {
-  color: black;
+  color: hsl(201, 92%, 9%);
   font-family: Arial, sans-serif;
 }
 
 /* Attribute selector */
 a[target] {
-  background-color: blue;
+  background-color: rgb(30,144,255);
   color: white;
 }
 
 /* Pseudo-class selector */
 a[target]:hover {
-  color: yellow;
+  color: rgba(237, 241, 23, 1);
 }
 
 /* ID selector */
@@ -33,11 +33,12 @@ a[target]:hover {
 /* selector list */
 #comment, #email {
   border: 1px solid blue;
+  border-radius: 5px; /* rounded-border*/
 }
 
 /* Descendant combinator */
 ol li {
-  color: purple;
+  color: #A307BE;
 }
 
 /* Child combinator */
@@ -64,7 +65,9 @@ p.hobby {
 
 /* Class selector */
 .Enter {
-  background-color: blue;
-  border: 2px solid black;
+  background-color: #000;
+  border-width: 5px;
+  border-style: double;
+  border-color: grey;
   color: white;
 }
