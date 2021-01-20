@@ -36,6 +36,31 @@ a[target]:hover {
 }
 
 /* Descendant combinator */
+ol li {
+  color: purple;
+}
+
+/* Child combinator */
+div > span {
+  background-color: DodgerBlue;
+}
+
+/* General sibling combinator */
+img ~ p {
+  color: red;
+}
+
+/* Adjacent sibling combinator */
+li + li {
+  font-weight: bold;
+  color: orange;
+}
+
+/* Combining two selectors */
+p.hobby {
+  font-weight: bold;
+  color: purple;
+}
 
 /* Class selector */
 .Enter {
