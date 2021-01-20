@@ -1,4 +1,4 @@
-# Scrum Meeting Notes
+# Scrum Meeting Notes (To be completed per member)
 
 ### Date:
 

@@ -6,8 +6,52 @@
   margin-right: 0vw;
 }
 
-h1 {
-  text-decoration: underline overline dotted red;
+.me {
+  margin-top: 10px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+@media all {
+  h1, h2, h3 {
+    margin-left: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 0vw;
+    text-decoration: underline overline dotted blue;
+    font-family: 'Roboto Mono', monospace;
+    display: block;
+    font-size: 30px;
+  }
+}
+
+#title {
+  font-size: 35px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+nav {
+  background-color: black;
+}
+
+#nav {
+  list-style-type: none;
+  margin: 5px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+#nav > li {
+  font-family: 'Roboto Mono', monospace;
+  float: left;
+  background-color: black;
+}
+
+#nav > a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* Element selectors */
@@ -16,12 +60,28 @@ body {
   font-size: 12px;
   margin: auto;
   text-align: left;
+  background-color: white;
+}
+
+@media only screen and (color) {
+  body {
+    background-color: light-blue;
+    font-size: 15px;
+  }
 }
 
 p {
-  margin: 10px 5px 10px 5px;
+  padding: 10px;
+  margin: 20px 5px 10px 1%;
   color: hsl(201, 92%, 9%);
   font-family: Arial, sans-serif;
+  display: inline;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Attribute selector */
@@ -31,6 +91,11 @@ a[target] {
 }
 
 /* Pseudo-class selector */
+.click::after {
+  content: " (Click it!)";
+}
+
+/* Pseudo-class */
 a[target]:hover {
   color: rgba(237, 241, 23, 1);
 }
@@ -50,6 +115,13 @@ a[target]:hover {
   border: 0.5mm solid blue;
   border-radius: 2vh; /* rounded-border*/
   font-size: 100%;
+  position: relative;
+}
+
+#site {
+  max-width: 60%;
+  max-height: 100%;
+  position: static;
 }
 
 /* Descendant combinator */
@@ -81,7 +153,7 @@ p.hobby {
 }
 
 /* Class selector */
-.Enter {
+.Enter, .my-buttons {
   background-color: #000;
   border-width: 5px;
   border-style: double;
@@ -89,4 +161,27 @@ p.hobby {
   color: white;
   height: 40px;
   width: 80px;
+}
+
+.Enter:active {
+  background-color: blue;
+}
+
+/* Flex box */
+.flex-container {
+  display: flex;
+  order: 3;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-shrink: 2;
+  flex-basis: auto;
+}
+
+/* grid */
+.grid-container {
+  display: inline-grid;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
 }
