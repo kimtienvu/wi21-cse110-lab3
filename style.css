@@ -1,15 +1,25 @@
 /* Universal Selector */
 * {
-  margin-left: 10px;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 0vw;
+  margin-right: 0vw;
+}
+
+h1 {
+  text-decoration: underline overline dotted red;
 }
 
 /* Element selectors */
 body {
   color: black;
   font-size: 12px;
+  margin: auto;
+  text-align: left;
 }
 
 p {
+  margin: 10px 5px 10px 5px;
   color: hsl(201, 92%, 9%);
   font-family: Arial, sans-serif;
 }
@@ -28,12 +38,18 @@ a[target]:hover {
 /* ID selector */
 #languages {
   font-family: Arial, sans-serif;
+  border: 0.05cm solid black;
 }
 
 /* selector list */
 #comment, #email {
-  border: 1px solid blue;
-  border-radius: 5px; /* rounded-border*/
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 0.5mm solid blue;
+  border-radius: 2vh; /* rounded-border*/
+  font-size: 100%;
 }
 
 /* Descendant combinator */
@@ -61,6 +77,7 @@ li + li {
 p.hobby {
   font-weight: bold;
   color: purple;
+  padding: 5px 1px 5px 1px; 
 }
 
 /* Class selector */
@@ -70,4 +87,6 @@ p.hobby {
   border-style: double;
   border-color: grey;
   color: white;
+  height: 40px;
+  width: 80px;
 }
