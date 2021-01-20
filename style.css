@@ -1,3 +1,45 @@
+/* Universal Selector */
+* {
+  margin-left: 10px;
+}
+
+/* Element selectors */
 body {
-  margin-left: 20px;
+  color: black;
+  font-size: 12px;
+}
+
+p {
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Attribute selector */
+a[target] {
+  background-color: blue;
+  color: white;
+}
+
+/* Pseudo-class selector */
+a[target]:hover {
+  color: yellow;
+}
+
+/* ID selector */
+#languages {
+  font-family: Arial, sans-serif;
+}
+
+/* selector list */
+#comment, #email {
+  border: 1px solid blue;
+}
+
+/* Descendant combinator */
+
+/* Class selector */
+.Enter {
+  background-color: blue;
+  border: 2px solid black;
+  color: white;
 }
